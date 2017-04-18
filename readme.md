@@ -1,4 +1,4 @@
-#Capsule
+# Capsule
 
 Capsule is an experimental web framework by [@HenrikJoreteg](http://twitter.com/HenrikJoreteg) for Node.js that uses Socket.io and Backbone.js to synchronize model state by sharing model code between the client and the server.
 
@@ -6,7 +6,7 @@ Capsule is an experimental web framework by [@HenrikJoreteg](http://twitter.com/
 
 MIT Licensed.
     
-##Introduction !important
+## Introduction !important
 
 Capsule presents and experimental approach to building real-time web apps that re-uses the exact same models on the server as what you serve in a script tag in the html of your app. I've used this approach for a couple of apps, one of which our team uses everyday.
 
@@ -14,12 +14,12 @@ For more information on this approach see my blog post on [Re-using Backbone.js 
 
 It's essentially a set of convenience methods and additions to [@jashkenas](http://twitter.com/jashkenas)'s excellent [Backbone.js](http://documentcloud.github.com/backbone/) lib. In it's current state Capsule is a bit indulgent in that it makes quite a few assumptions about your app and could certainly stand to be more generic.
 
-##Core assumptions are as follows:
+## Core assumptions are as follows:
 
 - All synced state is stored in a root model which is kept in memory on the server (yes, this is inefficient in some ways, but completely badass in others. Please don't tell me it won't scale we're also working on tying this into [@fritzy](http://twitter.com/fritzy)'s awesome upcoming thoonk.js redis lib that will use redis for clustering/scaling).
 - Several of the methods in `Capsule.View` assume that you're also using [ICanHaz.js](http://icanhazjs.com) and Mustache for your clientside templating.
 
-##How to use it
+## How to use it
 
 The annotated source serves as temporary API documentation of what the code is capable of. You should read it as well, before you attempt to use this:
 
@@ -171,11 +171,11 @@ Here's how you'd start building an app based on this method:
         });
 
 
-##Comments
+## Comments
 
 I'd love to get feedback and/or pull requests on this. Or, hit me up on twitter [@HenrikJoreteg](http://twitter.com/HenrikJoreteg).
 
-##Roadmap
+## Roadmap
 
 - Starting point/convenience methods for required server and client setups described above.
 - Scaling questions: One big limitation of this approach in its current state is scaling. This library will be converted to use [Thoonk.js](https://github.com/andyet/Thoonk.js) to leverage Redis's clustering and pub/sub capabilities as a back end.
@@ -185,7 +185,7 @@ I'd love to get feedback and/or pull requests on this. Or, hit me up on twitter 
 - More awesome
 
 
-##Change Log
+## Change Log
 - 0.2.2 
   - fixed bug in error callback code
   - added support for `templateHelpers` in views
